@@ -31,9 +31,9 @@ add_theme_support( 'genesis-responsive-viewport' );
 //* Defines Clickable Logo and adds Blog Info to title
 remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
 add_action( 'genesis_site_title','practice_logo',5,1);
-function practice_logo() 
+function practice_logo()
 {?>
-    <a id="sitelogo" href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_bloginfo( 'stylesheet_directory' ) ?>/images/logo.png" alt="<?php bloginfo('name')?>" title="<?php bloginfo('name')?>" /></a>
+    <a id="sitelogo" href="<?php bloginfo( 'url' ); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ) ?>/images/logo.png" alt="<?php bloginfo('name')?>" title="<?php bloginfo('name')?>" /></a>
 <?php }
 
 //* Remove the header right widget area
@@ -45,7 +45,7 @@ remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 remove_action ('genesis_footer' , 'genesis_do_footer');
 add_action ('genesis_footer' , 'idw_footer');
 function idw_footer() {?>
-    <div id="idw-footer"> 
+    <div id="idw-footer">
         <div>
             <span>
                 Practice Name<br />
@@ -92,7 +92,7 @@ function login_logo() { ?>
    <?php }
 add_action( 'login_enqueue_scripts', 'login_logo' );
 function put_my_url(){
-    return ('http://www.infinitydentalweb.com/'); 
+    return ('http://www.infinitydentalweb.com/');
     }
 add_filter('login_headerurl', 'put_my_url');
 
